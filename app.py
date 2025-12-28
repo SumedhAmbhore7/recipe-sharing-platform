@@ -1,7 +1,8 @@
 from flask import *
 from flask import Flask,redirect,render_template,request,url_for,session
+import os
 app=Flask(__name__)
-app.secret_key = 'sumedh'
+app.secret_key = os.environ.get('SECRET_KEY', 'sumedh')
 
 import sqlite3
 
