@@ -84,8 +84,8 @@ def log_save():
                 return redirect(url_for("home"))
         else:
             # return "It is password failed"
-            return "<script>alert('Login Failed')</script>"
-    # return redi
+            return "<script>alert('Login Failed');window.location.href='/login'</script>"
+    return redirect(url_for('login'))
     
 @app.route("/home")
 def home():
@@ -116,7 +116,11 @@ def dashboard():
     if "user" not  in session:
         return redirect(url_for("login"))
     else:
-        return render_template("dashboard.html")
+        con=db_connect()
+        c=con.cursor()
+        c.execute("select * from '{}'".format(session['user']))
+        data=c.fetchall()
+        return render_template("dashboard.html", data=data)
 
 @app.route("/profile")
 def profile():

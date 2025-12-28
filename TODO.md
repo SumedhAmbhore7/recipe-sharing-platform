@@ -1,7 +1,16 @@
-# Deployment Preparation Tasks for Render
-
-- [x] Create requirements.txt with Flask dependency
-- [x] Remove reg.db from Git tracking to ensure it's ignored
-- [x] Update app.py to use environment variable for SECRET_KEY
-- [x] Create Procfile for proper start command
-- [x] Update README.md with deployment instructions
+- [x] Update templates/dashboard.html to include Bootstrap CSS and JS links
+- [x] Add responsive layout with Bootstrap grid system
+- [x] Include dashboard sections: user stats, recent recipes, friends overview
+- [x] Add custom styles matching the site's theme
+- [x] Ensure responsiveness across devices
+- [x] Test the dashboard for functionality
+- [x] Update templates/profile.html to include Bootstrap CSS and JS links
+- [x] Add responsive layout with Bootstrap grid system for displaying recipes
+- [x] Add custom styles matching the site's theme
+- [x] Ensure responsiveness across devices
+- [x] Test the profile page for functionality
+- [ ] Update templates/view_recipe.html to include Bootstrap CSS and JS links
+- [ ] Add responsive layout with Bootstrap grid system for displaying recipe details
+- [ ] Add custom styles matching the site's theme
+- [ ] Ensure responsiveness across devices
+- [ ] Test the view_recipe page for functionality
